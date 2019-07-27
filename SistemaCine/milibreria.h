@@ -9,6 +9,8 @@ typedef struct Peli
 
 }Peliculas;
 
+
+void menu();
 int buscar_nombre();
 int buscar_genero();
 int buscar_clasificacion();
