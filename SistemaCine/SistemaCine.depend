@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1564030042 source:c:\users\admin\desktop\programación\proyectofinal-master\proyecto final\sistemacine\milibreria.c
+	"milibreria.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1564205079 c:\users\admin\desktop\programación\proyectofinal-master\proyecto final\sistemacine\milibreria.h
+
+1564030340 source:c:\users\admin\desktop\programación\proyectofinal-master\proyecto final\sistemacine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"milibreria.h"
+
