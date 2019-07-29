@@ -5,6 +5,7 @@
 int main()
 {
     int i=0,opcion;
+    char nom_peli[50];
 
     FILE *archivopeli;
 
@@ -65,7 +66,7 @@ int main()
         printf("3-Comprar Bebida\n");
         printf("4-Cuenta total\n");
         printf("5-Buscar Pelicula por Nombre\n");
-        printf("6-Buscar Pelicula por Nombre\n");
+        printf("6-Buscar Pelicula por Genero\n");
         printf("7-Salir\n");
         printf("\nDigite una opci%cn: ",162);
         scanf("%d", &opcion);
@@ -81,7 +82,6 @@ int main()
     {
         printf("\nPelicula %d",i+1);
 
-        fflush(stdin);
         printf("\nTitulo: %s",peli[i].titulo);
 
         printf("\nGenero: %s",peli[i].genero);
@@ -102,6 +102,29 @@ int main()
 
             break;
         case 5:
+            printf("\nDigite el titulo de la pelicula que desea buscar:\n");
+            fflush(stdin);
+            gets(nom_peli);
+
+            int t;
+            t = buscar_nombre(nom_peli, peli);
+
+            if (t==-1)
+            {
+
+                printf("\nLa pelicula que busca no esta en Cartelera.\n");
+
+            }
+            else
+            {
+                printf("\nTitulo: %s",peli[t].titulo);
+
+                printf("\nGenero: %s",peli[t].genero);
+
+                printf("\nClasificacion: R/%d\n",peli[t].clasif);
+            }
+
+            system("PAUSE");
 
             break;
         case 6:

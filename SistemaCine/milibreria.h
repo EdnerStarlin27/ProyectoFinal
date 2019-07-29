@@ -8,7 +8,7 @@ typedef struct
 
 }Peliculas;
 
-int buscar_nombre();
+int buscar_nombre(char [], Peliculas peli[]);
 int buscar_genero();
 int buscar_clasificacion();
 #endif // MI_LIBRERIA_H
