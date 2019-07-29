@@ -17,25 +17,20 @@ int main()
    /* for (i=0;i<4;i++)
     {
         printf("\nPelicula %d",i+1);
-
         fflush(stdin);
         printf("\nTitulo: ");
         gets(peli[i].titulo);
-
         printf("Genero: ");
         gets(peli[i].genero);
-
         printf("Clasificacion: R/");
         scanf("%d", &peli[i].clasif);
     }
-
     if(archivopeli==NULL)
     {
         printf("\nEl archivo no existia, por tanto se ha creado!\n");
         archivopeli=fopen("pelicula.txt","w");
         fclose(archivopeli);
     }
-
     archivopeli=fopen("pelicula.txt","r+t");
     if(!archivopeli==NULL)
     {
