@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1564446610 source:c:\users\user\desktop\sistemacine\sistemacine\main.c
-	<stdio.h>
-	<stdlib.h>
-	"milibreria.h"
-
-1564446046 c:\users\user\desktop\sistemacine\sistemacine\milibreria.h
-
-1564447373 source:c:\users\user\desktop\sistemacine\sistemacine\milibreria.c
+1564445072 source:c:\users\admin\desktop\programación\proyectofinal-master\proyecto final\sistemacine\milibreria.c
 	"milibreria.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+
+1564447462 c:\users\admin\desktop\programación\proyectofinal-master\proyecto final\sistemacine\milibreria.h
+
+1564452165 source:c:\users\admin\desktop\programación\proyectofinal-master\proyecto final\sistemacine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"milibreria.h"
 

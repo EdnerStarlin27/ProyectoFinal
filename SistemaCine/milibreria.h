@@ -2,20 +2,25 @@
 
 typedef struct
 {
-    char titulo[50];
-    char genero[50];
-    int clasif;
+    int hora,minut;
 
-}Peliculas;
+}Horario;
 
 typedef struct
 {
-    char nombre[50];
-    char asiento[25][25];
+    char idioma[50];
+    char titulo[50];
+    char genero[50];
+    int clasif;
+    char sala[3];
+    int duracion;
+    float precio;
+    Horario Horarios[3];
 
-}Comprador;
+}Peliculas;
 
 int buscar_nombre(char [], Peliculas peli[]);
-int buscar_genero();
-int buscar_clasificacion();
+int buscar_genero(char [], Peliculas peli[]);
+int buscar_clasificacion(int, Peliculas peli[]);
+
 #endif // MI_LIBRERIA_H
