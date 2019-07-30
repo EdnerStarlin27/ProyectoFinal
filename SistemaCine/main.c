@@ -57,12 +57,13 @@ int main()
     {
         printf("\nMenu:\n");
         printf("\nSeleccione a continuacion una de las siguientes opciones\n");
-        printf("\n1-Seleccionar pelicula\n");
-        printf("2-Comprar comida\n");
-        printf("3-Cuenta total\n");
-        printf("4-Buscar Pelicula por Nombre\n");
+        printf("\n1-Ver cartelera de peliculas\n");
+        printf("2-Seleccionar pelicula\n");
+        printf("3-Comprar comida\n");
+        printf("4-Cuenta total\n");
         printf("5-Buscar Pelicula por Genero\n");
-        printf("6-Salir\n");
+        printf("6-Buscar Pelicula por Nombre\n");
+        printf("7-Salir\n");
         printf("\nDigite una opci%cn: ",162);
         scanf("%d", &opcion);
 
@@ -84,15 +85,11 @@ int main()
         printf("\nClasificacion: R/%d\n",peli[i].clasif);
     }
 
-    printf("Cual es el numero de la pelicula que desea ver?");
-    scanf("%d", &num_peli);
-    printf("%sCu%sntas personas le acompa%san?",168,160,164);
-
     system("Pause");
 
             break;
         case 2:
-
+            seleccionar_pelicula();
             break;
         case 3:
 
@@ -101,6 +98,8 @@ int main()
 
             break;
         case 5:
+            break;
+        case 6:
             printf("\nDigite el titulo de la pelicula que desea buscar:\n");
             fflush(stdin);
             gets(nom_peli);
@@ -126,8 +125,6 @@ int main()
             system("PAUSE");
 
             break;
-        case 6:
-            break;
         case 7:
             break;
         default:
@@ -138,6 +135,6 @@ int main()
 
     }
     while (opcion!=7);
-
+    fclose(archivopeli);
     return 0;
 }
