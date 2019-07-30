@@ -15,9 +15,16 @@ typedef struct
     char sala[3];
     int duracion;
     float precio;
-    Horario Horarios[3];
+    Horario Horarios;
 
 }Peliculas;
+
+typedef struct
+{
+    char comida[50];
+    float precio_comida;
+
+}Comidas;
 
 typedef struct
 {
