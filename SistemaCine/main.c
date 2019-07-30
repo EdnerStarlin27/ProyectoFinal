@@ -175,11 +175,10 @@ int main()
             {
                 printf("El numero de la pelicula que ha seleccionado aun no esta en cartelera. \n");
                 system("PAUSE");
-            }else{
+            }
             seleccion_peli(num_peli);
             printf("\n Seleccionado con exito! \n");
             system("PAUSE");
-            }
             break;
         case 3:
 
@@ -288,11 +287,11 @@ int main()
             break;
         default:
             printf("Opcion no valida. Por favor, digite otra.\n");
+            system("PAUSE");
         }
 
         system("CLS");
     }
     while (opciont!=8);
 
-    return 0;
 }

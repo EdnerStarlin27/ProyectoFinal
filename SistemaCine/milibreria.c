@@ -61,8 +61,12 @@ void seleccion_peli(int num_peli)
             butacas[i][x]='O';
         }
     }
-    if (num_peli==1)
+    switch (num_peli)
     {
+
+    case 1:
+        {
+
         int precio_entrada1= 200;
         printf("Cantidad de asientos: ");
         scanf("%d",&cantidad_asientos);
@@ -93,8 +97,11 @@ void seleccion_peli(int num_peli)
         printf("Asientos usados en esta sala: %d\n",asientos_usados);
         printf("Precio de entradas: $%d\n",cuenta_total);
     }
-    else if(num_peli==2)
-    {
+    break;
+    case 2:
+        {
+
+
         int precio_e2=350;
         printf("Cantidad de asientos: ");
         scanf("%d",&cantidad_asientos);
@@ -125,8 +132,10 @@ void seleccion_peli(int num_peli)
         printf("Asientos usados: %d\n",asientos_usados);
         printf("Precio de entradas: $%d\n",cuenta_total);
     }
-    if(num_peli==3)
-    {
+    break;
+    case 3:
+        {
+
         int precio_e3=200;
         printf("Cantidad de asientos: ");
         scanf("%d",&cantidad_asientos);
@@ -158,7 +167,11 @@ void seleccion_peli(int num_peli)
         printf("Precio de entradas: $%d\n",cuenta_total);
 
     }
-    if(num_peli==4);
+    break;
+
+    case 4:
+        {
+
     int precio_e4=250;
     printf("Cantidad de asientos: ");
     scanf("%d",&cantidad_asientos);
@@ -188,9 +201,13 @@ void seleccion_peli(int num_peli)
     printf("Asientos disponibles: %d\n",asientos_libres);
     printf("Asientos usados: %d\n",asientos_usados);
     printf("Precio de entradas: $%d\n",cuenta_total);
-
-
+    break;
+    default:
+        printf("No existe esta seleccion \n");
 }
+    }
+}
+
 void mostrar_asientos(char * butacas[filas][columnas],int cantidad_asientos)
 {
     system("cls");
@@ -223,7 +240,6 @@ void mostrar_asientos(char * butacas[filas][columnas],int cantidad_asientos)
 
 
 }
-
 int buscar_numero(char *fila)
 {
     fila=(char*)calloc(40,sizeof(char));
@@ -236,3 +252,4 @@ int buscar_numero(char *fila)
 
     }
 }
+

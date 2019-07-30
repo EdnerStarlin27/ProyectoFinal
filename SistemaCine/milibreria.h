@@ -35,7 +35,7 @@ typedef struct
 int buscar_nombre(char [], Peliculas peli[]);
 int buscar_genero(char [], Peliculas peli[]);
 int buscar_clasificacion(int, Peliculas peli[]);
-void seleccion_peli(int num_peli);
+int buscar_numero(char *fila);
 
 
 #endif // MI_LIBRERIA_H
