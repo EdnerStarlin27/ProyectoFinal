@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "milibreria.h"
+#define filas 9
+#define columnas 9
 
 int main()
 {
-    int j=0;
-    int i=0,opcion;//opcion2;
+    int j=0,i=0,opciont,num_peli;
     int clasi_peli;
     char nom_peli[50],gen_peli[50];
+    char *butacas[filas][columnas];
+
 
     FILE *archivopeli;
 
@@ -121,8 +124,6 @@ int main()
     }
 
 
-
-
     printf("Bienvenido a Cine PUCMM!!!\n");
 
 
@@ -139,11 +140,11 @@ int main()
         printf("7-Cuenta total\n");
         printf("8-Salir\n");
         printf("\nDigite una opci%cn: ",162);
-        scanf("%d", &opcion);
+        scanf("%d", &opciont);
 
         system("CLS");
 
-        switch(opcion)
+        switch(opciont)
         {
         case 1:
             printf("\nPeliculas en Cartelera\n");
@@ -165,8 +166,17 @@ int main()
 
             system("Pause");
 
+
             break;
         case 2:
+            printf("Digite el numero de la pelicula que desea ver: \n");
+            scanf("%d", &num_peli);
+            if (num_peli > 4)
+            {
+                printf("El numero de la pelicula que ha seleccionado aun no esta en cartelera.");
+            }
+            seleccion_peli(num_peli);
+
 
             break;
         case 3:
@@ -280,7 +290,7 @@ int main()
 
         system("CLS");
     }
-    while (opcion!=8);
+    while (opciont!=8);
 
     return 0;
 }

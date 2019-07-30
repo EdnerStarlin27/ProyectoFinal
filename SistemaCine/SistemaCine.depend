@@ -12,3 +12,16 @@
 	<stdlib.h>
 	"milibreria.h"
 
+1564461657 source:c:\users\user\desktop\mdtoptg\sistemacine\milibreria.c
+	"milibreria.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1564461687 c:\users\user\desktop\mdtoptg\sistemacine\milibreria.h
+
+1564461450 source:c:\users\user\desktop\mdtoptg\sistemacine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"milibreria.h"
+
