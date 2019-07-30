@@ -19,6 +19,13 @@ typedef struct
 
 }Peliculas;
 
+typedef struct
+{
+    char nombre[50];
+    char asiento[25][25];
+
+}Comprador;
+
 int buscar_nombre(char [], Peliculas peli[]);
 int buscar_genero(char [], Peliculas peli[]);
 int buscar_clasificacion(int, Peliculas peli[]);

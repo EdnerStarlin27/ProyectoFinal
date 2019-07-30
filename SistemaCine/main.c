@@ -88,12 +88,12 @@ int main()
     {
         printf("\nMenu:\n");
         printf("\nSeleccione a continuacion una de las siguientes opciones\n");
-        printf("\n1-Seleccionar pelicula\n");
-        printf("2-Comprar comida\n");
-        printf("3-Comprar Bebida\n");
+        printf("\n1-Ver cartelera de peliculas\n");
+        printf("2-Seleccionar pelicula\n");
+        printf("3-Comprar comida\n");
         printf("4-Cuenta total\n");
-        printf("5-Buscar Pelicula por Nombre\n");
-        printf("6-Buscar Pelicula por Genero\n");
+        printf("5-Buscar Pelicula por Genero\n");
+        printf("6-Buscar Pelicula por Nombre\n");
         printf("7-Buscar Pelicula por Clasificacion\n");
         printf("8-Salir\n");
         printf("\nDigite una opci%cn: ",162);
@@ -126,14 +126,13 @@ int main()
                 printf("\n");
             }
 
-            printf("\nDigite el numero de la pelicula que desea ver: ");
-            scanf("%d", &opcion2);
-
             system("Pause");
 
             break;
         case 2:
 
+            printf("\nDigite el numero de la pelicula que desea ver: ");
+            scanf("%d", &opcion2);
             break;
         case 3:
 
