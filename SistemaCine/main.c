@@ -173,11 +173,13 @@ int main()
             scanf("%d", &num_peli);
             if (num_peli > 4)
             {
-                printf("El numero de la pelicula que ha seleccionado aun no esta en cartelera.");
-            }
+                printf("El numero de la pelicula que ha seleccionado aun no esta en cartelera. \n");
+                system("PAUSE");
+            }else{
             seleccion_peli(num_peli);
-
-
+            printf("\n Seleccionado con exito! \n");
+            system("PAUSE");
+            }
             break;
         case 3:
 
@@ -192,9 +194,6 @@ int main()
 
             break;
         case 4:
-
-            break;
-        case 5:
             printf("\nDigite el titulo de la pelicula que desea buscar:\n");
             fflush(stdin);
             gets(nom_peli);
@@ -225,7 +224,7 @@ int main()
             system("PAUSE");
 
             break;
-        case 6:
+        case 5:
             printf("\nDigite el genero de la pelicula que desea buscar:\n");
             fflush(stdin);
             gets(gen_peli);
@@ -254,7 +253,7 @@ int main()
             system("PAUSE");
 
             break;
-        case 7:
+        case 6:
             printf("\nDigite la clasificacion con que esta calificada la pelicula:\n");
             scanf("%d", &clasi_peli);
 
@@ -280,6 +279,9 @@ int main()
             }
 
             system("PAUSE");
+
+            break;
+        case 7:
 
             break;
         case 8:

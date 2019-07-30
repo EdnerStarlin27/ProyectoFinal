@@ -25,3 +25,16 @@
 	<stdlib.h>
 	"milibreria.h"
 
+1564504390 source:c:\users\user\desktop\sistemacine\milibreria.c
+	"milibreria.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1564503430 c:\users\user\desktop\sistemacine\milibreria.h
+
+1564503875 source:c:\users\user\desktop\sistemacine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"milibreria.h"
+
