@@ -5,7 +5,7 @@
 #define filas 5
 #define columnas 8
 
-int cuenta_total=0;
+int * cuenta_total;
 int opciont,sumatoria_cuenta,fila_pedida,columna_pedida,opcion,break_menu=1,asientos_libres=filas*columnas,asientos_usados=0;
 char *butacas[filas][columnas];
 int cantidad_asientos=0;
@@ -49,11 +49,49 @@ int buscar_clasificacion(int cal_peli, Peliculas peli[])
 
     return -1;
 }
+void comprar_comida()
+{
+    int n;
+    cuenta_total=realloc(n,sizeof(int));
+    do{
+    printf("Escriba en numero del item que desea comprar: \n");
+    scanf("%d", &n);
+    printf("\n Si no desea comprar mas, presione 8 \n");
+    switch (n)
+    {
+        case 1:
+            cuenta_total+=170;
+        break;
+        case 2:
+            cuenta_total+=170;
+            break;
+        case 3:
+            cuenta_total+=150;
+            break;
+        case 4:
+            cuenta_total+=120;
+            break;
+        case 5:
+            cuenta_total+=70;
+            break;
+        case 6:
+            cuenta_total+=50;
+            break;
+        case 7:
+            cuenta_total+=25;
+            break;
+        default:
+            break;
 
+    }
+    }
+    while(n!=8);
+    free(cuenta_total);
+}
 void seleccion_peli(int num_peli)
 {
     Comprador*comp=(Comprador *) calloc(asientos_usados, sizeof(Comprador));
-
+    cuenta_total=(int *)malloc(sizeof(int));
     for(int i=0; i<filas; i++)
     {
         for(int x=0; x<columnas; x++)
@@ -96,6 +134,7 @@ void seleccion_peli(int num_peli)
         printf("Asientos disponibles en esta sala: %d\n",asientos_libres);
         printf("Asientos usados en esta sala: %d\n",asientos_usados);
         printf("Precio de entradas: $%d\n",cuenta_total);
+        free(cuenta_total);
     }
     break;
     case 2:
@@ -131,6 +170,7 @@ void seleccion_peli(int num_peli)
         printf("Asientos disponibles: %d\n",asientos_libres);
         printf("Asientos usados: %d\n",asientos_usados);
         printf("Precio de entradas: $%d\n",cuenta_total);
+        free(cuenta_total);
     }
     break;
     case 3:
@@ -165,6 +205,7 @@ void seleccion_peli(int num_peli)
         printf("Asientos disponibles: %d\n",asientos_libres);
         printf("Asientos usados: %d\n",asientos_usados);
         printf("Precio de entradas: $%d\n",cuenta_total);
+        free(cuenta_total);
 
     }
     break;
@@ -202,6 +243,7 @@ void seleccion_peli(int num_peli)
     printf("Asientos usados: %d\n",asientos_usados);
     printf("Precio de entradas: $%d\n",cuenta_total);
     break;
+    free(cuenta_total);
     default:
         printf("No existe esta seleccion \n");
 }

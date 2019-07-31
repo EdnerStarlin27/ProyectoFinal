@@ -188,6 +188,7 @@ int main()
                 printf("\nPrecio: %.2f\n", comida[j].precio_comida);
                 printf("\n");
             }
+            comprar_comida();
 
             system("PAUSE");
 

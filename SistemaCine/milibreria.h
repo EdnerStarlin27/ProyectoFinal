@@ -32,6 +32,13 @@ typedef struct
 
 }Comprador;
 
+typedef struct
+{
+    char nombre[100];
+    float cuenta_p_per;
+
+}cuenta_p_persona;
+
 int buscar_nombre(char [], Peliculas peli[]);
 int buscar_genero(char [], Peliculas peli[]);
 int buscar_clasificacion(int, Peliculas peli[]);
