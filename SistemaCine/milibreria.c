@@ -340,6 +340,7 @@ char * leer_archivo(char * archivo){
 void archivo (int cuentap)
 {
     char *nombre;
+    nombre = (char*) calloc(40,sizeof(char));
     FILE * nombrep;
     FILE * cuentapp;
     nombrep = fopen ("nombre.txt", "a+");
@@ -352,6 +353,7 @@ void archivo (int cuentap)
     {
         printf ("Escriba su nombre: ");
         nombre = leer();
+        nombre=(char*)realloc(nombre,sizeof(char*));
         fprintf (nombrep,"%s\n",nombre);
         fprintf (cuentapp,"%d\n",&cuenta_total);
         fclose (nombrep);
