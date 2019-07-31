@@ -49,14 +49,14 @@ int buscar_clasificacion(int cal_peli, Peliculas peli[])
 
     return -1;
 }
+
 void comprar_comida()
 {
     int n;
     cuenta_total=realloc(n,sizeof(int));
     do{
-    printf("Escriba en numero del item que desea comprar: \n");
+    printf("Escriba en numero del item que desea comprar, si no desea nada presione 8: \n");
     scanf("%d", &n);
-    printf("\n Si no desea comprar mas, presione 8 \n");
     switch (n)
     {
         case 1:
@@ -80,13 +80,16 @@ void comprar_comida()
         case 7:
             cuenta_total+=25;
             break;
+        case 8:
+            system("CLS");
+            return(main());
+            break;
         default:
             break;
 
     }
     }
     while(n!=8);
-    free(cuenta_total);
 }
 void seleccion_peli(int num_peli)
 {
