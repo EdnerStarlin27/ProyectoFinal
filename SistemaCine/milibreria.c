@@ -5,7 +5,7 @@
 #define filas 5
 #define columnas 8
 
-int * cuenta_total;
+int cuenta_total=0;
 int opciont,sumatoria_cuenta,fila_pedida,columna_pedida,opcion,break_menu=1,asientos_libres=filas*columnas,asientos_usados=0;
 char *butacas[filas][columnas];
 int cantidad_asientos=0;
@@ -52,11 +52,12 @@ int buscar_clasificacion(int cal_peli, Peliculas peli[])
 
 void comprar_comida()
 {
+    fflush(stdin);
     int n;
-    cuenta_total=realloc(n,sizeof(int));
     do{
     printf("Escriba en numero del item que desea comprar, si no desea nada presione 8: \n");
     scanf("%d", &n);
+
     switch (n)
     {
         case 1:
@@ -93,8 +94,8 @@ void comprar_comida()
 }
 void seleccion_peli(int num_peli)
 {
+    fflush(stdin);
     Comprador*comp=(Comprador *) calloc(asientos_usados, sizeof(Comprador));
-    cuenta_total=(int *)malloc(sizeof(int));
     for(int i=0; i<filas; i++)
     {
         for(int x=0; x<columnas; x++)
@@ -137,7 +138,6 @@ void seleccion_peli(int num_peli)
         printf("Asientos disponibles en esta sala: %d\n",asientos_libres);
         printf("Asientos usados en esta sala: %d\n",asientos_usados);
         printf("Precio de entradas: $%d\n",cuenta_total);
-        free(cuenta_total);
     }
     break;
     case 2:
@@ -173,7 +173,6 @@ void seleccion_peli(int num_peli)
         printf("Asientos disponibles: %d\n",asientos_libres);
         printf("Asientos usados: %d\n",asientos_usados);
         printf("Precio de entradas: $%d\n",cuenta_total);
-        free(cuenta_total);
     }
     break;
     case 3:
@@ -208,7 +207,6 @@ void seleccion_peli(int num_peli)
         printf("Asientos disponibles: %d\n",asientos_libres);
         printf("Asientos usados: %d\n",asientos_usados);
         printf("Precio de entradas: $%d\n",cuenta_total);
-        free(cuenta_total);
 
     }
     break;
@@ -246,7 +244,6 @@ void seleccion_peli(int num_peli)
     printf("Asientos usados: %d\n",asientos_usados);
     printf("Precio de entradas: $%d\n",cuenta_total);
     break;
-    free(cuenta_total);
     default:
         printf("No existe esta seleccion \n");
 }
@@ -296,5 +293,47 @@ int buscar_numero(char *fila)
         }
 
     }
+}
+char * leer_archivo(char * archivo){
+    FILE * p;
+    char * texto = NULL;
+    int i = 0;
+    char c;
+    Comprador*comp=(Comprador *) calloc(i+2, sizeof(Comprador));
+    p = fopen("cuenta.txt", "r");
+    if (p==NULL){
+        fputs("Error abriendo el archivo", stderr);
+        return NULL;
+    }
+    while ((c=fgetc(p))!=EOF){
+        if (texto==NULL){
+            texto = (char*) calloc(i+2, sizeof(char));
+        } else{
+            texto = (char*) realloc(texto, (i+2)* sizeof(char));
+        }
+        if (texto==NULL){
+            fputs("Error reservando memoria para el string", stderr);
+            return NULL;
+        }
+        texto[i++]=c;
+    }
+    fclose(p);
+    texto[i]='\0';
+    return texto;
+}
+int guardar_archivo(char * nombre_archivo, char * cuenta){
+    fflush(stdin);
+    Comprador*comp=(Comprador *) calloc(asientos_usados, sizeof(Comprador));
+    FILE * p;
+    p = fopen(cuenta, "w");
+    if (p==NULL){
+        return 0;
+    }
+    for(int x = 0; x<40;x++){
+    fputs(comp[x].nombre,p);
+    }
+    fputs(cuenta_total, p);
+    fclose(p);
+    return 1;
 }
 
