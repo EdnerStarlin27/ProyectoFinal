@@ -23,7 +23,22 @@ int buscar_nombre(char nom_peli[50], Peliculas peli[4])
 
     return -1;
 }
+char * leer(void)
 
+{
+    char * arr;
+    char c;
+    arr =(char*)malloc(sizeof(char));
+    int i = 0;
+    *arr = '\0';
+    while ((c=getchar()) != '\n')
+    {
+        arr = (char*)realloc(arr,(i+2)*sizeof(char));
+        arr[i++]= c;
+        arr[i]= '\0';
+    }
+    return arr;
+}
 int buscar_genero(char gen_peli[50], Peliculas peli[4])
 {
     int i;
@@ -321,19 +336,26 @@ char * leer_archivo(char * archivo){
     texto[i]='\0';
     return texto;
 }
-int guardar_archivo(char * nombre_archivo, char * cuenta){
-    fflush(stdin);
-    Comprador*comp=(Comprador *) calloc(asientos_usados, sizeof(Comprador));
-    FILE * p;
-    p = fopen(cuenta, "w");
-    if (p==NULL){
-        return 0;
+
+void archivo (int cuentap)
+{
+    char *nombre;
+    FILE * nombrep;
+    FILE * cuentapp;
+    nombrep = fopen ("nombre.txt", "a+");
+    cuentapp = fopen ("cuenta.txt", "a+");
+    if (nombrep==NULL)
+    {
+        printf(" Error en la apertura. Es posible que el fichero no exista. \n ");
     }
-    for(int x = 0; x<40;x++){
-    fputs(comp[x].nombre,p);
+    else
+    {
+        printf ("Escriba su nombre: ");
+        nombre = leer();
+        fprintf (nombrep,"%s\n",nombre);
+        fprintf (cuentapp,"%d\n",&cuenta_total);
+        fclose (nombrep);
+        fclose (cuentap);
     }
-    fputs(cuenta_total, p);
-    fclose(p);
-    return 1;
 }
 

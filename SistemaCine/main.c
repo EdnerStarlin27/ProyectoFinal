@@ -132,8 +132,8 @@ int main()
         printf("\nMenu:\n");
         printf("\nSeleccione a continuacion una de las siguientes opciones\n");
         printf("\n1-Cartelera\n");
-        printf("2-Seleccionar pelicula\n");
-        printf("3-Comprar Comida\n");
+        printf("2-Comprar Comida\n");
+        printf("3-Seleccionar pelicula\n");
         printf("4-Buscar Pelicula por Nombre\n");
         printf("5-Buscar Pelicula por Genero\n");
         printf("6-Buscar Pelicula por Clasificacion\n");
@@ -147,6 +147,7 @@ int main()
         switch(opciont)
         {
         case 1:
+
             printf("\nPeliculas en Cartelera\n");
 
             for (i=0; i<4; i++)
@@ -166,9 +167,20 @@ int main()
 
             system("Pause");
 
-
             break;
         case 2:
+
+            for (j=0; j<7 ; j++)
+            {
+                printf("%d.%s",j+1,comida[j].comida);
+                printf("\nPrecio: %.2f\n", comida[j].precio_comida);
+                printf("\n");
+            }
+            comprar_comida();
+
+            system("PAUSE");
+            break;
+        case 3:
             printf("Digite el numero de la pelicula que desea ver: \n");
             scanf("%d", &num_peli);
             if (num_peli > 4)
@@ -179,19 +191,6 @@ int main()
             seleccion_peli(num_peli);
             printf("\n Seleccionado con exito! \n");
             system("PAUSE");
-            break;
-        case 3:
-
-            for (j=0; j<7 ;j++)
-            {
-                printf("%d.%s",j+1,comida[j].comida);
-                printf("\nPrecio: %.2f\n", comida[j].precio_comida);
-                printf("\n");
-            }
-            comprar_comida();
-
-            system("PAUSE");
-
             break;
         case 4:
             printf("\nDigite el titulo de la pelicula que desea buscar:\n");
@@ -282,7 +281,7 @@ int main()
 
             break;
         case 7:
-
+            archivo();
             break;
         case 8:
             break;
