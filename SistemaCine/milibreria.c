@@ -187,7 +187,7 @@ void seleccion_peli(int num_peli)
 
         printf("Asientos disponibles: %d\n",asientos_libres);
         printf("Asientos usados: %d\n",asientos_usados);
-        printf("Precio de entradas: $%d\n",cuenta_total);
+        printf("Precio de entradas: $%d\n",&cuenta_total);
     }
     break;
     case 3:
@@ -251,7 +251,6 @@ void seleccion_peli(int num_peli)
             cuenta_total+=precio_e4;
             c_asientos_copy--;
             mostrar_asientos(&butacas,cantidad_asientos);
-
         }
     }
 
@@ -264,7 +263,11 @@ void seleccion_peli(int num_peli)
 }
     }
 }
-
+float cuenta()
+{
+    printf("%5.fl", &cuenta_total);
+    system("PAUSE");
+}
 void mostrar_asientos(char * butacas[filas][columnas],int cantidad_asientos)
 {
     system("cls");
@@ -337,9 +340,8 @@ char * leer_archivo(char * archivo){
     return texto;
 }
 
-void archivo (int cuentap)
+void archivo (int cuenta_total, char*nombre)
 {
-    char *nombre;
     nombre = (char*) calloc(40,sizeof(char));
     FILE * nombrep;
     FILE * cuentapp;
@@ -357,7 +359,7 @@ void archivo (int cuentap)
         fprintf (nombrep,"%s\n",nombre);
         fprintf (cuentapp,"%d\n",&cuenta_total);
         fclose (nombrep);
-        fclose (cuentap);
+        fclose (cuenta_total);
     }
 }
 

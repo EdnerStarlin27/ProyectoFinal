@@ -10,7 +10,7 @@ int main()
     int clasi_peli;
     char nom_peli[50],gen_peli[50];
     char *butacas[filas][columnas];
-
+    char nombre_gen[500]="Comprador 1";
 
     FILE *archivopeli;
 
@@ -281,7 +281,7 @@ int main()
 
             break;
         case 7:
-            archivo();
+            cuenta();
             break;
         case 8:
             break;
