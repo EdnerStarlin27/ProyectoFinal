@@ -5,7 +5,7 @@ typedef struct
 {
     int hora,minut;
 
-}Horario;
+} Horario;
 
 typedef struct
 {
@@ -18,20 +18,20 @@ typedef struct
     float precio;
     Horario Horarios;
 
-}Peliculas;
+} Peliculas;
 
 typedef struct
 {
     char comida[50];
     float precio_comida;
 
-}Comidas;
+} Comidas;
 
 typedef struct
 {
     char nombre[50];
 
-}Comprador;
+} Comprador;
 
 
 int buscar_nombre(char [], Peliculas peli[]);
