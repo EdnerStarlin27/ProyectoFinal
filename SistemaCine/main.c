@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "milibreria.h"
-#define filas 9
-#define columnas 9
 
 int main()
 {
@@ -10,7 +8,6 @@ int main()
     int j=0,i=0,opciont,num_peli;
     int clasi_peli;
     char nom_peli[50],gen_peli[50];
-    char *butacas[filas][columnas];
 
     FILE *archivopeli;
 
@@ -129,14 +126,14 @@ int main()
 
     do
     {
-        printf("\nMenu:\n");
-        printf("\nSeleccione a continuacion una de las siguientes opciones\n");
+        printf("\nMen%c:\n",163);
+        printf("\nSeleccione a continuaci%cn una de las siguientes opciones\n",162);
         printf("\n1-Cartelera\n");
         printf("2-Comprar Comida\n");
-        printf("3-Seleccionar pelicula\n");
-        printf("4-Buscar Pelicula por Nombre\n");
-        printf("5-Buscar Pelicula por Genero\n");
-        printf("6-Buscar Pelicula por Clasificacion\n");
+        printf("3-Seleccionar Pel%ccula\n",161);
+        printf("4-Buscar Pel%ccula por Nombre\n",161);
+        printf("5-Buscar Pel%ccula por G%cnero\n",161,130);
+        printf("6-Buscar Pel%ccula por Clasificaci%cn\n",161,162);
         printf("7-Cuenta total\n");
         printf("8-Salir\n");
         printf("\nDigite una opci%cn: ",162);
@@ -148,19 +145,19 @@ int main()
         {
         case 1:
 
-            printf("\nPeliculas en Cartelera\n");
+            printf("\nPel%cculas en Cartelera\n",161);
 
             for (i=0; i<4; i++)
             {
-                printf("\nPelicula %d\n",i+1);
-                printf("\nTitulo: %s",peli[i].titulo);
+                printf("\nPel%ccula %d\n",161,i+1);
+                printf("\nT%ctulo: %s",161,peli[i].titulo);
                 printf("\nIdioma: %s", peli[i].idioma);
-                printf("\nGenero: %s",peli[i].genero);
-                printf("\nClasificacion: R/%d",peli[i].clasif);
-                printf("\nDuracion: %d min", peli[i].duracion);
+                printf("\nG%cnero: %s",130,peli[i].genero);
+                printf("\nClasificaci%cn: R/%d",162,peli[i].clasif);
+                printf("\nDuraci%cn: %d min",162, peli[i].duracion);
                 printf("\nSala: %s", peli[i].sala);
                 printf("\nPrecio: %.2f", peli[i].precio);
-                printf("\nHorarios\n");
+                printf("\nHorario\n");
 
                 printf("%d:%d\n",peli[i].Horarios.hora, peli[i].Horarios.minut);
             }
@@ -181,19 +178,19 @@ int main()
             system("PAUSE");
             break;
         case 3:
-            printf("Digite el numero de la pelicula que desea ver: \n");
+            printf("Digite el n%cmero de la pel%ccula que desea ver: \n",163,161);
             scanf("%d", &num_peli);
             if (num_peli > 4)
             {
-                printf("El numero de la pelicula que ha seleccionado aun no esta en cartelera. \n");
+                printf("El n%cmero de la pel%ccula que ha seleccionado a%cn no esta en cartelera. \n",163,161,163);
                 system("PAUSE");
             }
             seleccion_peli(num_peli);
-            printf("\n Seleccionado con exito! \n");
+            printf("\n Seleccionado con %cxito! \n",130);
             system("PAUSE");
             break;
         case 4:
-            printf("\nDigite el titulo de la pelicula que desea buscar:\n");
+            printf("\nDigite el t%ctulo de la pel%ccula que desea buscar: \n",161,161);
             fflush(stdin);
             gets(nom_peli);
 
@@ -202,18 +199,18 @@ int main()
 
             if (t==-1)
             {
-                printf("\nLa pelicula que busca no esta en Cartelera.\n");
+                printf("\nLa pel%ccula que busca no esta en Cartelera.\n",161);
             }
             else
             {
-                printf("\nTitulo: %s",peli[t].titulo);
+                printf("\nT%ctulo: %s",161,peli[t].titulo);
                 printf("\nIdioma: %s", peli[t].idioma);
-                printf("\nGenero: %s",peli[t].genero);
-                printf("\nClasificacion: R/%d",peli[t].clasif);
-                printf("\nDuracion: %dmin", peli[t].duracion);
+                printf("\nG%cnero: %s",130,peli[t].genero);
+                printf("\nClasificaci%cn: R/%d",162,peli[t].clasif);
+                printf("\nDuraci%cn: %d min",162, peli[t].duracion);
                 printf("\nSala: %s", peli[t].sala);
                 printf("\nPrecio: %.2f", peli[t].precio);
-                printf("\nHorarios\n");
+                printf("\nHorario\n");
 
 
                 printf("%d:%d",peli[t].Horarios.hora, peli[t].Horarios.minut);
@@ -224,7 +221,7 @@ int main()
 
             break;
         case 5:
-            printf("\nDigite el genero de la pelicula que desea buscar:\n");
+            printf("\nDigite el g%cnero de la pel%ccula que desea buscar: \n",130,161);
             fflush(stdin);
             gets(gen_peli);
 
@@ -232,18 +229,18 @@ int main()
 
             if (g==-1)
             {
-                printf("\nEl genero de la pelicula que busca no esta en Cartelera.\n");
+                printf("\nEl g%cnero de la pel%ccula que busca no esta disponible por el momento.\n",130,161);
             }
             else
             {
-                printf("\nTitulo: %s",peli[g].titulo);
+                printf("\nT%ctulo: %s",161,peli[g].titulo);
                 printf("\nIdioma: %s", peli[g].idioma);
-                printf("\nGenero: %s",peli[g].genero);
-                printf("\nClasificacion: R/%d",peli[g].clasif);
-                printf("\nDuracion: %d min", peli[g].duracion);
+                printf("\nG%cnero: %s",130,peli[g].genero);
+                printf("\nClasificaci%cn: R/%d",162,peli[g].clasif);
+                printf("\nDuraci%cn: %d min",162, peli[g].duracion);
                 printf("\nSala: %s", peli[t].sala);
                 printf("\nPrecio: %.2f", peli[g].precio);
-                printf("\nHorarios\n");
+                printf("\nHorario\n");
 
                 printf("%d:%d",peli[g].Horarios.hora, peli[g].Horarios.minut);
 
@@ -253,25 +250,25 @@ int main()
 
             break;
         case 6:
-            printf("\nDigite la clasificacion con que esta calificada la pelicula:\n");
+            printf("\nDigite la clasificaci%cn de la pel%ccula que desea buscar:\n",162,161);
             scanf("%d", &clasi_peli);
 
             int c = buscar_clasificacion(clasi_peli, peli);
 
             if (c==-1)
             {
-                printf("\nLa pelicula que busca con esta clasificacion no esta en Cartelera.\n");
+                printf("\nLa clasificaci%cn que busca no est%c disponible por el momento.\n",162,160);
             }
             else
             {
-                printf("\nTitulo: %s",peli[c].titulo);
+                printf("\nT%ctulo: %s",161,peli[c].titulo);
                 printf("\nIdioma: %s", peli[c].idioma);
-                printf("\nGenero: %s",peli[c].genero);
-                printf("\nClasificacion: R/%d",peli[c].clasif);
-                printf("\nDuracion: %dmin", peli[c].duracion);
+                printf("\nG%cnero: %s",130,peli[c].genero);
+                printf("\nClasificaci%cn: R/%d",162,peli[c].clasif);
+                printf("\nDuraci%cn: %d min",162, peli[c].duracion);
                 printf("\nSala: %s", peli[c].sala);
                 printf("\nPrecio: %.2f", peli[c].precio);
-                printf("\nHorarios\n");
+                printf("\nHorario\n");
 
                 printf("%d:%d",peli[c].Horarios.hora, peli[c].Horarios.minut);
 
@@ -284,11 +281,11 @@ int main()
             pagar();
             break;
         case 8:
-            printf("\n Gracias por usar nuestro servicio. \n");
+            printf("\nGracias por usar nuestro servicio. \n\n");
             system("PAUSE");
             break;
         default:
-            printf("Opcion no valida. Por favor, digite otra.\n");
+            printf("Opci%cn no valida!!! Por favor, digite otra.\n",163);
             system("PAUSE");
         }
 

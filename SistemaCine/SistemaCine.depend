@@ -38,3 +38,16 @@
 	<stdlib.h>
 	"milibreria.h"
 
+1564634778 source:c:\users\admin\downloads\proyectofinal-master\sistemacine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"milibreria.h"
+
+1564623073 c:\users\admin\downloads\proyectofinal-master\sistemacine\milibreria.h
+
+1564634932 source:c:\users\admin\downloads\proyectofinal-master\sistemacine\milibreria.c
+	"milibreria.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

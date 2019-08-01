@@ -56,7 +56,7 @@ void comprar_comida()
     int n;
     do
     {
-        printf("Escriba en numero del item que desea comprar, si no desea nada presione 8: \n");
+        printf("Escriba el n%cmero del item que desea comprar, si no desea nada presione 8: \n",163);
         scanf("%d", &n);
 
         switch (n)//cuenta total va adquiriendo dinero
@@ -91,12 +91,13 @@ void comprar_comida()
 
         }
     }
-    while(n>=8);
+    while(n!=8);
 }
 void seleccion_peli(int num_peli)//se selecciona la pelicula
 {
     fflush(stdin);
     Comprador*comp=(Comprador *) calloc(asientos_usados, sizeof(Comprador)); //guarda memoria para el comprador
+
     for(int i=0; i<filas; i++)
     {
         for(int x=0; x<columnas; x++)
@@ -104,6 +105,7 @@ void seleccion_peli(int num_peli)//se selecciona la pelicula
             butacas[i][x]='O';//las que estan disponibles las muestra como O
         }
     }
+
     switch (num_peli)//dependiendo la pelicula busca y selecciona
     {
 
@@ -115,15 +117,18 @@ void seleccion_peli(int num_peli)//se selecciona la pelicula
         scanf("%d",&cantidad_asientos);
         mostrar_asientos(&butacas,cantidad_asientos);
         c_asientos_copy=cantidad_asientos;
+
         for(int x=0; x<cantidad_asientos; x++)//toma los datos especificados arriba con nombre reservado, y repite en cada eleccion
         {
+            fflush(stdin);
             printf("Nombre: \n");
-            scanf("%s", comp[x].nombre);
+            gets(comp[x].nombre);
             printf("Asientos por elegir: %d\n",c_asientos_copy);
             printf("Ingrese la fila del asiento(1-5): ");
             scanf("%d",&fila_pedida);
             printf("Ingrese la columna del asiento(1-8): ");
             scanf("%d",&columna_pedida);
+
             if(butacas[fila_pedida-1][columna_pedida-1]=='O')
             {
                 butacas[fila_pedida-1][columna_pedida-1]='X';//convierte en X los valores antes tomados como O
@@ -141,6 +146,7 @@ void seleccion_peli(int num_peli)//se selecciona la pelicula
         printf("Precio a pagar en caja: $%d\n",cuenta_total);//el valor de la cuenta toal
     }
     break;
+
     case 2:
     {
 
@@ -150,15 +156,18 @@ void seleccion_peli(int num_peli)//se selecciona la pelicula
         scanf("%d",&cantidad_asientos);
         mostrar_asientos(&butacas,cantidad_asientos);
         c_asientos_copy=cantidad_asientos;
+
         for(int x=0; x<cantidad_asientos; x++)
         {
+            fflush(stdin);
             printf("Nombre: \n");
-            scanf("%s", comp[x].nombre);
+            gets(comp[x].nombre);
             printf("Asientos por elegir: %d\n",c_asientos_copy);
             printf("Ingrese la fila del asiento(1-5): ");
             scanf("%d",&fila_pedida);
             printf("Ingrese la columna del asiento(1-8): ");
             scanf("%d",&columna_pedida);
+
             if(butacas[fila_pedida-1][columna_pedida-1]=='O')
             {
                 butacas[fila_pedida-1][columna_pedida-1]='X';
@@ -176,6 +185,7 @@ void seleccion_peli(int num_peli)//se selecciona la pelicula
         printf("Precio a pagar en caja: $%d\n",cuenta_total);
     }
     break;
+
     case 3:
     {
 
@@ -184,15 +194,18 @@ void seleccion_peli(int num_peli)//se selecciona la pelicula
         scanf("%d",&cantidad_asientos);
         mostrar_asientos(&butacas,cantidad_asientos);
         c_asientos_copy=cantidad_asientos;
+
         for(int x=0; x<cantidad_asientos; x++)
         {
+            fflush(stdin);
             printf("Nombre: \n");
-            scanf("%s", comp[x].nombre);
+            gets(comp[x].nombre);
             printf("Asientos por elegir: %d\n",c_asientos_copy);
             printf("Ingrese la fila del asiento(1-5): ");
             scanf("%d",&fila_pedida);
             printf("Ingrese la columna del asiento(1-8): ");
             scanf("%d",&columna_pedida);
+
             if(butacas[fila_pedida-1][columna_pedida-1]=='O')
             {
                 butacas[fila_pedida-1][columna_pedida-1]='X';
@@ -220,15 +233,18 @@ void seleccion_peli(int num_peli)//se selecciona la pelicula
         scanf("%d",&cantidad_asientos);
         mostrar_asientos(&butacas,cantidad_asientos);
         c_asientos_copy=cantidad_asientos;
+
         for(int x=0; x<cantidad_asientos; x++)
         {
+            fflush(stdin);
             printf("Nombre: \n");
-            scanf("%s", comp[x].nombre);
+            gets(comp[x].nombre);
             printf("Asientos por elegir: %d\n",c_asientos_copy);
             printf("Ingrese la fila del asiento(1-5): ");
             scanf("%d",&fila_pedida);
             printf("Ingrese la columna del asiento(1-8): ");
             scanf("%d",&columna_pedida);
+
             if(butacas[fila_pedida-1][columna_pedida-1]=='O')
             {
                 butacas[fila_pedida-1][columna_pedida-1]='X';
@@ -244,15 +260,16 @@ void seleccion_peli(int num_peli)//se selecciona la pelicula
         printf("Asientos usados: %d\n",asientos_usados);
         printf("Precio a pagar en caja: $%d\n",cuenta_total);
         break;
+
         default:
-            printf("No existe esta seleccion \n");
+            printf("No existe esta selecci%cn \n",162);
         }
     }
 }
 
 void mostrar_asientos(char * butacas[filas][columnas],int cantidad_asientos)//nos permite visualizar los asientos
 {
-    system("cls");
+    system("CLS");
 
     for(int i=0; i<columnas; i++)
     {
@@ -264,6 +281,7 @@ void mostrar_asientos(char * butacas[filas][columnas],int cantidad_asientos)//no
 
     }
     printf("\n");
+
     for(int i=0; i<filas; i++)
     {
         printf("%d ",i+1);  //Contador filas
@@ -279,8 +297,6 @@ void mostrar_asientos(char * butacas[filas][columnas],int cantidad_asientos)//no
         printf("\n");
     }
     printf("\n");
-
-
 }
 
 void pagar()
@@ -296,7 +312,7 @@ void pagar()
     case 1:
         if (cuenta_total>0)
         {
-            printf("Su ceunta ha sido pagada \n");
+            printf("Su cuenta ha sido pagada \n");
             cuenta_total=0;
             fila_pedida=0;
             columna_pedida=0;
@@ -305,19 +321,16 @@ void pagar()
         {
             printf("Su cuenta no tiene expensas, debe elegir antes de pagar \n");
         }
-        system("pause");
-        system("cls");
+        system("PAUSE");
+        system("CLS");
         break;
     case 2:
-        printf("Volvera al menu de inicio \n");
-        system("pause");
-        system("cls");
+        printf("Volvera al men%c inicio \n",163);
+        system("PAUSE");
+        system("CLS");
         return main();
         break;
     default:
         break;
     }
-
-
-
 }
