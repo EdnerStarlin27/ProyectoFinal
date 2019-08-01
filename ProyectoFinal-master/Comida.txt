@@ -1,8 +1,0 @@
-﻿Productos		       Precio
-1.Hot Dog		        $170 
-2.Palomitas Grandes		$170 
-3.Palomitas Pequenas		$120 
-4.Palomitas Medianas		$150 
-5.Refresco Grande		$70 
-6.Refresco Mediano		$50 
-7.Refresco Pequeno		$45 
