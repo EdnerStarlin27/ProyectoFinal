@@ -91,7 +91,7 @@ void comprar_comida()
 
         }
     }
-    while(n!=8);
+    while(n>=8);
 }
 void seleccion_peli(int num_peli)//se selecciona la pelicula
 {

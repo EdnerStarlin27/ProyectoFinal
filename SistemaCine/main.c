@@ -6,6 +6,7 @@
 
 int main()
 {
+    system("color f3");
     int j=0,i=0,opciont,num_peli;
     int clasi_peli;
     char nom_peli[50],gen_peli[50];
