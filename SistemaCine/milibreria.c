@@ -298,6 +298,8 @@ void pagar()
         {
             printf("Su ceunta ha sido pagada \n");
             cuenta_total=0;
+            fila_pedida=0;
+            columna_pedida=0;
         }
         else
         {
