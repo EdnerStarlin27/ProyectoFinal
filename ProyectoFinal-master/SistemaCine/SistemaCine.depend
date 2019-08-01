@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1564445072 source:c:\users\admin\desktop\programación\proyectofinal-master\proyecto final\sistemacine\milibreria.c
+	"milibreria.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1564465222 c:\users\admin\desktop\programación\proyectofinal-master\proyecto final\sistemacine\milibreria.h
+
+1564464935 source:c:\users\admin\desktop\programación\proyectofinal-master\proyecto final\sistemacine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"milibreria.h"
+
+1564461657 source:c:\users\user\desktop\mdtoptg\sistemacine\milibreria.c
+	"milibreria.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1564461687 c:\users\user\desktop\mdtoptg\sistemacine\milibreria.h
+
+1564461450 source:c:\users\user\desktop\mdtoptg\sistemacine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"milibreria.h"
+
+1564622592 source:c:\users\user\desktop\sistemacine\milibreria.c
+	"milibreria.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1564620891 c:\users\user\desktop\sistemacine\milibreria.h
+
+1564622777 source:c:\users\user\desktop\sistemacine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"milibreria.h"
+
+1564634778 source:c:\users\admin\downloads\proyectofinal-master\sistemacine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"milibreria.h"
+
+1564623073 c:\users\admin\downloads\proyectofinal-master\sistemacine\milibreria.h
+
+1564634932 source:c:\users\admin\downloads\proyectofinal-master\sistemacine\milibreria.c
+	"milibreria.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
