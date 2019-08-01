@@ -10,7 +10,6 @@ int main()
     int clasi_peli;
     char nom_peli[50],gen_peli[50];
     char *butacas[filas][columnas];
-    char nombre_gen[500]="Comprador 1";
 
     FILE *archivopeli;
 
@@ -281,9 +280,11 @@ int main()
 
             break;
         case 7:
-            cuenta();
+            pagar();
             break;
         case 8:
+            printf("\n Gracias por usar nuestro servicio. \n");
+            system("PAUSE");
             break;
         default:
             printf("Opcion no valida. Por favor, digite otra.\n");
@@ -293,5 +294,7 @@ int main()
         system("CLS");
     }
     while (opciont!=8);
+
+    return 0;
 
 }

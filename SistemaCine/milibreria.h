@@ -1,5 +1,6 @@
 #ifndef MI_LIBRERIA_H
-
+#define filas 5
+#define columnas 8
 typedef struct
 {
     int hora,minut;
@@ -32,17 +33,14 @@ typedef struct
 
 }Comprador;
 
-typedef struct
-{
-    char nombre[100];
-    float cuenta_p_per;
-
-}cuenta_p_persona;
 
 int buscar_nombre(char [], Peliculas peli[]);
 int buscar_genero(char [], Peliculas peli[]);
 int buscar_clasificacion(int, Peliculas peli[]);
-int buscar_numero(char *fila);
+void mostrar_asientos(char * butacas[filas][columnas],int cantidad_asientos);
+void seleccion_peli(int num_peli);
+void comprar_comida();
+void pagar();
 
 
 #endif // MI_LIBRERIA_H
