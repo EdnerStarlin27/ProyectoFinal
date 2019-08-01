@@ -25,15 +25,15 @@
 	<stdlib.h>
 	"milibreria.h"
 
-1564622592 source:c:\users\user\desktop\sistemacine\milibreria.c
+1564630304 source:c:\users\user\desktop\sistemacine\milibreria.c
 	"milibreria.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1564620891 c:\users\user\desktop\sistemacine\milibreria.h
+1564628932 c:\users\user\desktop\sistemacine\milibreria.h
 
-1564622777 source:c:\users\user\desktop\sistemacine\main.c
+1564630031 source:c:\users\user\desktop\sistemacine\main.c
 	<stdio.h>
 	<stdlib.h>
 	"milibreria.h"

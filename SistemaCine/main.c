@@ -124,7 +124,7 @@ int main()
     printf("Bienvenido a Cine PUCMM!!!\n");
 
 
-    do
+    do //sirve como menu, mientras se cumplan las condiciones
     {
         printf("\nMen%c:\n",163);
         printf("\nSeleccione a continuaci%cn una de las siguientes opciones\n",162);
@@ -141,7 +141,7 @@ int main()
 
         system("CLS");
 
-        switch(opciont)
+        switch(opciont)//toma como dato el valor y evalua en sus cases
         {
         case 1:
 
@@ -162,7 +162,7 @@ int main()
                 printf("%d:%d\n",peli[i].Horarios.hora, peli[i].Horarios.minut);
             }
 
-            system("Pause");
+            system("PAUSE");
 
             break;
         case 2:
@@ -291,8 +291,6 @@ int main()
 
         system("CLS");
     }
-    while (opciont!=8);
-
+    while (opciont=8);
     return 0;
-
 }
