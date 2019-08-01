@@ -304,7 +304,7 @@ void pagar()
     int decision;
     printf("Buenas, gracias por utilizar nuestro servicio\n");
     printf("Su asiento es %d en la columna %d \n", fila_pedida,columna_pedida);
-    printf("Su deuda es: %d $\n", cuenta_total);
+    printf("Su deuda es: $%d \n", cuenta_total);
     printf("Desea pagar ahora? \n1.Si \n2.No \n");
     scanf("%d", &decision);
     switch(decision)
